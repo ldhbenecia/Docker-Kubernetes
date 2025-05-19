@@ -8,8 +8,8 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
   php:
-  build:
-    context: ./dockerfiles
-    dockerfile: php.dockerfile
-  volumes:
-    - ./src:/var/www/html:delegated
+    build:
+      context: ./dockerfiles
+      dockerfile: php.dockerfile
+    volumes:
+      - ./src:/var/www/html:delegated
